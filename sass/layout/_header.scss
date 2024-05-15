@@ -1,0 +1,70 @@
+@use "../helper/var" as *;
+
+header {
+  @extend %sections-width;
+  position: relative;
+  padding: 0 0 2em 0;
+  @extend %sections-under-line;
+  .header-container {
+    @extend %d-flex-j-between-a-center;
+
+    .logo {
+      @extend %d-flex-column;
+      gap: 0.5em;
+
+      .title {
+        transition: 0.3s ease;
+        a {
+          text-decoration: none;
+          color: $text-color;
+          position: relative;
+          h1 {
+            font-size: var(--h1);
+            letter-spacing: 0.0238095em;
+            font-weight: 100;
+          }
+
+          &::after {
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 0.3em;
+            background-color: $links-hover;
+            bottom: 0;
+          }
+        }
+        &:hover {
+          background-color: $links-hover;
+        }
+      }
+
+      .sub-title {
+        p {
+          font-size: var(--p);
+          letter-spacing: $letter-spacing;
+          color: $accent;
+        }
+      }
+    }
+
+    .menu {
+      display: none;
+    }
+
+    .links {
+      @extend %d-flex;
+      gap: 2.5em;
+
+      a {
+        font-size: var(--p);
+        color: $links-nactive-color;
+        text-decoration: none;
+        letter-spacing: $letter-spacing;
+      }
+
+      a.active {
+        color: $text-color;
+      }
+    }
+  }
+}

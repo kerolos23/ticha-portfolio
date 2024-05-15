@@ -1,0 +1,29 @@
+@use "../helper/var" as *;
+
+footer {
+  padding: 50px 0 0;
+  position: relative;
+  @extend %sections-width;
+  @extend %d-flex-j-between-a-center;
+
+  .made {
+    p {
+      color: $p;
+      a {
+        @extend %links;
+        color: $text-color;
+        font-weight: 600;
+      }
+    }
+  }
+
+  .social-media-icons {
+    @extend %d-flex;
+    gap: 1em;
+
+    a {
+      font-size: 1.5em;
+      color: $text-color;
+    }
+  }
+}

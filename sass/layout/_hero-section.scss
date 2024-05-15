@@ -1,0 +1,50 @@
+@use "../helper/var" as *;
+
+.hero {
+  padding: 50px 0;
+  position: relative;
+  @extend %sections-width;
+  @extend %sections-under-line;
+  .hero-container {
+    @extend %d-flex;
+    gap: $gap;
+    .image {
+      width: calc(35% - 1.25em);
+    }
+
+    .personal-info {
+      width: calc(65% - 1.25em);
+      gap: 1em;
+      @extend %d-flex-column;
+
+      p {
+        line-height: 1.5em;
+        color: $p;
+      }
+
+      a {
+        @extend %links;
+      }
+    }
+
+    .links {
+      a:nth-child(1) {
+        i {
+          color: #ffd337;
+        }
+      }
+
+      a:nth-child(2) {
+        i {
+          color: #848484;
+        }
+      }
+
+      a:nth-child(3) {
+        i {
+          color: #00a9be;
+        }
+      }
+    }
+  }
+}

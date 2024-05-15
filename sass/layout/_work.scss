@@ -1,0 +1,78 @@
+@use "../helper/var" as *;
+
+.work {
+  padding: 50px 0;
+  position: relative;
+  @extend %sections-width;
+  @extend %sections-under-line;
+
+  .work-container {
+    @extend %d-flex-column;
+    gap: $gap;
+
+    .title {
+      h2 {
+        @extend %titles;
+      }
+    }
+    .works {
+      @extend %d-flex;
+      gap: 2em;
+      .images {
+        @extend %d-flex-column;
+        width: 20%;
+        gap: 0.5em;
+
+        .img {
+          position: relative;
+          height: 236px;
+
+          img {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            left: 0;
+            bottom: 0;
+            transition: 0.6s ease;
+          }
+
+          img.active {
+            position: relative;
+            z-index: 999;
+          }
+        }
+
+        .small-imgs {
+          @extend %d-flex;
+          img {
+            width: calc(100% / 4);
+            transition: 0.6s ease;
+            filter: contrast(0.5);
+          }
+
+          img.active {
+            filter: unset;
+          }
+        }
+      }
+
+      .info {
+        @extend %d-flex-column;
+        gap: 0.5em;
+
+        .title {
+          a {
+            @extend %links;
+            color: $text-color;
+            font-size: var(--h3);
+          }
+        }
+
+        .text-info {
+          line-height: 1.5em;
+          color: $p;
+        }
+      }
+    }
+  }
+}

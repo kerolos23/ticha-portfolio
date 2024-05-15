@@ -1,0 +1,41 @@
+@use "../helper/var" as *;
+
+.wrapper {
+  padding: 50px 0;
+  position: relative;
+  @extend %sections-width;
+  @extend %sections-under-line;
+
+  .wrapper-container {
+    gap: $gap;
+    @extend %d-flex-column;
+
+    .title {
+      h2 {
+        @extend %titles;
+      }
+    }
+
+    .info {
+      .text {
+        @extend %d-flex-column;
+        gap: 0.5em;
+
+        p {
+          color: $p;
+          span {
+            font-weight: 600;
+            color: $text-color;
+          }
+
+          a {
+            @extend %links;
+          }
+        }
+      }
+    }
+    a {
+      @extend %links;
+    }
+  }
+}

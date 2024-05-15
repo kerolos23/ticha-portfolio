@@ -1,0 +1,60 @@
+@use "../helper/var" as *;
+
+.vedios {
+  padding: 50px 0;
+  position: relative;
+  @extend %sections-width;
+  @extend %sections-under-line;
+
+  .vedios-container {
+    @extend %d-flex-column;
+    gap: $gap;
+
+    .title {
+      h2 {
+        @extend %titles;
+      }
+    }
+
+    .vedio-cont {
+      @extend %d-flex;
+      gap: $gap;
+
+      .info {
+        @extend %d-flex-column;
+        gap: 0.5em;
+
+        .info-title {
+          a {
+            @extend %links;
+            color: $text-color;
+            font-size: var(--h3);
+          }
+        }
+
+        .explain {
+          p {
+            color: $p;
+
+            span {
+              font-weight: 600;
+            }
+          }
+        }
+
+        .press {
+          p {
+            color: $p;
+            span {
+              font-weight: 600;
+            }
+
+            a {
+              @extend %links;
+            }
+          }
+        }
+      }
+    }
+  }
+}

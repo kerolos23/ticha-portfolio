@@ -1,0 +1,266 @@
+:root {
+  --h1: 2.6em;
+  --h2: 2em;
+  --h3: 0.9em;
+  --p: 1em;
+}
+
+footer, .services .services-container, header .header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.services .services-container .cont, .services .services-container .cont .info ul, .work .work-container, .work .work-container .works .images, .work .work-container .works .info, .vedios .vedios-container, .vedios .vedios-container .vedio-cont .info, .wrapper .wrapper-container, .wrapper .wrapper-container .info .text, .hero .hero-container .personal-info, header .header-container .logo {
+  display: flex;
+  flex-direction: column;
+}
+
+footer .social-media-icons, .work .work-container .works, .work .work-container .works .images .small-imgs, .vedios .vedios-container .vedio-cont, .hero .hero-container, header .header-container .links {
+  display: flex;
+}
+
+footer, .services, .work, .vedios, .wrapper, .hero, header {
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.services::after, .work::after, .vedios::after, .wrapper::after, .hero::after, header::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 0.1em;
+  left: 0;
+  bottom: 0;
+  background-color: #ccc;
+}
+
+footer .made p a, .work .work-container .works .info .title a, .vedios .vedios-container .vedio-cont .info .info-title a, .vedios .vedios-container .vedio-cont .info .press p a, .wrapper .wrapper-container .info .text p a, .wrapper .wrapper-container a, .hero .hero-container .personal-info a {
+  text-decoration: underline;
+  text-decoration-color: #dfc2ed;
+  color: #222;
+  transition: 0.3s ease;
+}
+footer .made p a:hover, .work .work-container .works .info .title a:hover, .vedios .vedios-container .vedio-cont .info .info-title a:hover, .vedios .vedios-container .vedio-cont .info .press p a:hover, .wrapper .wrapper-container .info .text p a:hover, .wrapper .wrapper-container a:hover, .hero .hero-container .personal-info a:hover {
+  background-color: #dfc2ed;
+}
+
+.services .services-container .cont .title h2, .work .work-container .title h2, .vedios .vedios-container .title h2, .wrapper .wrapper-container .title h2 {
+  font-size: var(--h2);
+  font-weight: 600;
+  letter-spacing: 0.08em;
+}
+
+header {
+  position: relative;
+  padding: 0 0 2em 0;
+}
+header .header-container .logo {
+  gap: 0.5em;
+}
+header .header-container .logo .title {
+  transition: 0.3s ease;
+}
+header .header-container .logo .title a {
+  text-decoration: none;
+  color: #222;
+  position: relative;
+}
+header .header-container .logo .title a h1 {
+  font-size: var(--h1);
+  letter-spacing: 0.0238095em;
+  font-weight: 100;
+}
+header .header-container .logo .title a::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 0.3em;
+  background-color: #dfc2ed;
+  bottom: 0;
+}
+header .header-container .logo .title:hover {
+  background-color: #dfc2ed;
+}
+header .header-container .logo .sub-title p {
+  font-size: var(--p);
+  letter-spacing: 0.08em;
+  color: #ccc;
+}
+header .header-container .menu {
+  display: none;
+}
+header .header-container .links {
+  gap: 2.5em;
+}
+header .header-container .links a {
+  font-size: var(--p);
+  color: #999;
+  text-decoration: none;
+  letter-spacing: 0.08em;
+}
+header .header-container .links a.active {
+  color: #222;
+}
+
+.hero {
+  padding: 50px 0;
+  position: relative;
+}
+.hero .hero-container {
+  gap: 2.5em;
+}
+.hero .hero-container .image {
+  width: calc(35% - 1.25em);
+}
+.hero .hero-container .personal-info {
+  width: calc(65% - 1.25em);
+  gap: 1em;
+}
+.hero .hero-container .personal-info p {
+  line-height: 1.5em;
+  color: #575757;
+}
+.hero .hero-container .links a:nth-child(1) i {
+  color: #ffd337;
+}
+.hero .hero-container .links a:nth-child(2) i {
+  color: #848484;
+}
+.hero .hero-container .links a:nth-child(3) i {
+  color: #00a9be;
+}
+
+.wrapper {
+  padding: 50px 0;
+  position: relative;
+}
+.wrapper .wrapper-container {
+  gap: 2.5em;
+}
+.wrapper .wrapper-container .info .text {
+  gap: 0.5em;
+}
+.wrapper .wrapper-container .info .text p {
+  color: #575757;
+}
+.wrapper .wrapper-container .info .text p span {
+  font-weight: 600;
+  color: #222;
+}
+.vedios {
+  padding: 50px 0;
+  position: relative;
+}
+.vedios .vedios-container {
+  gap: 2.5em;
+}
+.vedios .vedios-container .vedio-cont {
+  gap: 2.5em;
+}
+.vedios .vedios-container .vedio-cont .info {
+  gap: 0.5em;
+}
+.vedios .vedios-container .vedio-cont .info .info-title a {
+  color: #222;
+  font-size: var(--h3);
+}
+.vedios .vedios-container .vedio-cont .info .explain p {
+  color: #575757;
+}
+.vedios .vedios-container .vedio-cont .info .explain p span {
+  font-weight: 600;
+}
+.vedios .vedios-container .vedio-cont .info .press p {
+  color: #575757;
+}
+.vedios .vedios-container .vedio-cont .info .press p span {
+  font-weight: 600;
+}
+.work {
+  padding: 50px 0;
+  position: relative;
+}
+.work .work-container {
+  gap: 2.5em;
+}
+.work .work-container .works {
+  gap: 2em;
+}
+.work .work-container .works .images {
+  width: 20%;
+  gap: 0.5em;
+}
+.work .work-container .works .images .img {
+  position: relative;
+  height: 236px;
+}
+.work .work-container .works .images .img img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  bottom: 0;
+  transition: 0.6s ease;
+}
+.work .work-container .works .images .img img.active {
+  position: relative;
+  z-index: 999;
+}
+.work .work-container .works .images .small-imgs img {
+  width: 25%;
+  transition: 0.6s ease;
+  filter: contrast(0.5);
+}
+.work .work-container .works .images .small-imgs img.active {
+  filter: unset;
+}
+.work .work-container .works .info {
+  gap: 0.5em;
+}
+.work .work-container .works .info .title a {
+  color: #222;
+  font-size: var(--h3);
+}
+.work .work-container .works .info .text-info {
+  line-height: 1.5em;
+  color: #575757;
+}
+
+.services {
+  padding: 50px 0;
+  position: relative;
+}
+.services .services-container .cont {
+  width: 50%;
+  gap: 2.5em;
+}
+.services .services-container .cont .info {
+  padding: 0 0 0 2.5em;
+}
+.services .services-container .cont .info ul {
+  gap: 1em;
+}
+.services .services-container .cont .info ul li {
+  color: #575757;
+}
+
+footer {
+  padding: 50px 0 0;
+  position: relative;
+}
+footer .made p {
+  color: #575757;
+}
+footer .made p a {
+  color: #222;
+  font-weight: 600;
+}
+footer .social-media-icons {
+  gap: 1em;
+}
+footer .social-media-icons a {
+  font-size: 1.5em;
+  color: #222;
+}/*# sourceMappingURL=main.css.map */
